@@ -138,13 +138,70 @@
 //3. 运行时错误（调试）
 //
 
-int main()
-{
-	printf("Hello github!\n");
+//int main()
+//{
+//	printf("Hello github!\n");
+//
+//	return 0;
+//}
 
+#include<stddef.h>
+
+int Equilateral(size_t a, size_t b, size_t c)
+{
+	//if(a == b == c)//err因为==是从左到右结合的，a==b的结果是0或1，再和c比较就不对了
+	if (a == b && b == c)
+	{
+		return 1;
+	}
+	return 0;
+}
+int Isosceles(size_t a, size_t b, size_t c)
+{
+	if (a == b || a == c || b == c)
+	{
+		return 1;
+	}
+	return 0;
+}
+int Ordinary(size_t a, size_t b, size_t c)
+{
+	if (a + b > c && a + c > b && b + c > a)
+	{
+		return 1;
+	}
 	return 0;
 }
 
+int main()
+{
+	size_t a = 0;
+	size_t b = 0;
+	size_t c = 0;
+	while (1)
+	{
+		scanf("%zu %zu %zu", &a, &b, &c);
+		if (Equilateral(a, b, c))
+		{
+			printf("Equilateral triangle\n");
+		}
+		else if (Isosceles(a, b, c))
+		{
+			printf("Isosceles triangle!\n");
+		}
+		else if (Ordinary(a, b, c))
+		{
+			printf("Ordinary triangle!\n");
+		}
+		else
+		{
+			printf("Not a triangle!\n");
+		}
+	}
+
+
+	return 0;
+}
 
 
 
