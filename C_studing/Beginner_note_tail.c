@@ -107,30 +107,30 @@
 //	printf("String = %s\n", string);
 //}
 
-#include <stddef.h>//size_t定义在此头文件中
-#include<assert.h>
-size_t my_strlen(const char* str)
-{
-	const char* start = str;
-	//assert(str != NULL);
-	assert(str);//因为后续要解引用，所以需要保证str不是空指针（不能对空指针解引用）
-	//即使不加assert，传入NULL时，程序也会崩溃
-
-	while (*str != '\0')
-	{
-		str++;
-	}
-	return str - start;//指针相减，结果是两个指针之间相隔的元素个数
-}
-
-int main()
-{
-	char arr[] = { "hello bit" };
-	size_t len = my_strlen(arr);
-	printf("%zu\n", len);//%zu:专门用于输出size_t类型的数据
-
-	return 0;
-}
+//#include <stddef.h>//size_t定义在此头文件中
+//#include<assert.h>
+//size_t my_strlen(const char* str)
+//{
+//	const char* start = str;
+//	//assert(str != NULL);
+//	assert(str);//因为后续要解引用，所以需要保证str不是空指针（不能对空指针解引用）
+//	//即使不加assert，传入NULL时，程序也会崩溃
+//
+//	while (*str != '\0')
+//	{
+//		str++;
+//	}
+//	return str - start;//指针相减，结果是两个指针之间相隔的元素个数
+//}
+//
+//int main()
+//{
+//	char arr[] = { "hello bit" };
+//	size_t len = my_strlen(arr);
+//	printf("%zu\n", len);//%zu:专门用于输出size_t类型的数据
+//
+//	return 0;
+//}
 
 //常见的错误
 //1. 编译型错误（语法错误）
@@ -138,7 +138,12 @@ int main()
 //3. 运行时错误（调试）
 //
 
+int main()
+{
+	printf("Hello github!\n");
 
+	return 0;
+}
 
 
 
