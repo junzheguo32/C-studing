@@ -68,7 +68,7 @@
 //	char arr2[] = { "hello bit" };
 //	char* p = NULL;
 //	p = my_strcpy(arr1, arr2);
-//	printf("%s\n", p);//%s需要传入字符串首地址
+//	printf("%s\n", p);//%s需要传入字符串 "首地址"
 //	printf("%c\n", *p);//*p表示字符串的第一个字符
 //	printf("%p\n", p);
 //
@@ -145,63 +145,155 @@
 //	return 0;
 //}
 
-#include<stddef.h>
+//#include<stddef.h>
+//
+//int Equilateral(size_t a, size_t b, size_t c)
+//{
+//	//if(a == b == c)//err因为==是从左到右结合的，a==b的结果是0或1，再和c比较就不对了
+//	if (a == b && b == c)
+//	{
+//		return 1;
+//	}
+//	return 0;
+//}
+//int Isosceles(size_t a, size_t b, size_t c)
+//{
+//	if (a == b || a == c || b == c)
+//	{
+//		return 1;
+//	}
+//	return 0;
+//}
+//int Ordinary(size_t a, size_t b, size_t c)
+//{
+//	if (a + b > c && a + c > b && b + c > a)
+//	{
+//		return 1;
+//	}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	size_t a = 0;
+//	size_t b = 0;
+//	size_t c = 0;
+//	while (1)
+//	{
+//		scanf("%zu %zu %zu", &a, &b, &c);
+//		if (Equilateral(a, b, c))
+//		{
+//			printf("Equilateral triangle\n");
+//		}
+//		else if (Isosceles(a, b, c))
+//		{
+//			printf("Isosceles triangle!\n");
+//		}
+//		else if (Ordinary(a, b, c))
+//		{
+//			printf("Ordinary triangle!\n");
+//		}
+//		else
+//		{
+//			printf("Not a triangle!\n");
+//		}
+//	}
+//
+//
+//	return 0;
+//}
 
-int Equilateral(size_t a, size_t b, size_t c)
-{
-	//if(a == b == c)//err因为==是从左到右结合的，a==b的结果是0或1，再和c比较就不对了
-	if (a == b && b == c)
-	{
-		return 1;
-	}
-	return 0;
-}
-int Isosceles(size_t a, size_t b, size_t c)
-{
-	if (a == b || a == c || b == c)
-	{
-		return 1;
-	}
-	return 0;
-}
-int Ordinary(size_t a, size_t b, size_t c)
-{
-	if (a + b > c && a + c > b && b + c > a)
-	{
-		return 1;
-	}
-	return 0;
-}
+//int main()
+//{
+//	int i = 0;
+//	int arr[] = { 1,2,3,4,5 };
+//	short* p = (short*)arr;
+//	for (i = 0; i < 4; i++)
+//	{
+//		*(p + i) = 0;
+//	}
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d ",arr[i]);//0 0 3 4 5
+//	}
+//
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a = 0x11223344;
+//	char* pc = (char*)&a;
+//	*pc = 0;
+//	printf("%x\n", a);//%x，以16进制打印
+//	printf("%o\n", a);//%o，以8进制打印
+//	printf("%b\n", a);
+//
+//
+//	return 0;
+//}
 
+//#include<string.h>
+//void fun(char* str, int left ,int right)
+//{
+//	char tmp = 0;
+//	while (left <= right)
+//	{
+//		tmp = *(str + right);
+//		*(str + right) = *(str + left);
+//		*(str + left) = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//int main()
+//{
+//	char arr[10001] = { 0 };
+//	//scanf("%s", arr);//scanf()遇到空格会停止读入
+//	gets(arr);
+//	int left = 0;
+//	int right = strlen(arr) - 1;//长度 - 1 就是右下标
+//	fun(arr, left,right);
+//	printf("%s\n", arr);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i = 0;
+//	int a = 0;
+//	int n = 0;
+//	scanf("%d %d", &a,&n);
+//	int k = 0;
+//	int sum = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		k = k * 10 + a;
+//		sum += k;
+//	}
+//	printf("%d\n", sum);
+//	return 0;
+//}
+
+//题目：求出1~100000之间的所有“水仙花数”并输出
+//“水仙花数”是指一个n位数，其各位数的n次方之和正好等于该数本身，如153 = 1^3+5^3+3^3，则153是一个“水仙花数”
 int main()
 {
-	size_t a = 0;
-	size_t b = 0;
-	size_t c = 0;
-	while (1)
-	{
-		scanf("%zu %zu %zu", &a, &b, &c);
-		if (Equilateral(a, b, c))
-		{
-			printf("Equilateral triangle\n");
-		}
-		else if (Isosceles(a, b, c))
-		{
-			printf("Isosceles triangle!\n");
-		}
-		else if (Ordinary(a, b, c))
-		{
-			printf("Ordinary triangle!\n");
-		}
-		else
-		{
-			printf("Not a triangle!\n");
-		}
-	}
-
-
+	int n = 0;
+	
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
