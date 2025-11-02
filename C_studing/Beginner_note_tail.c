@@ -278,14 +278,113 @@
 
 //题目：求出1~100000之间的所有“水仙花数”并输出
 //“水仙花数”是指一个n位数，其各位数的n次方之和正好等于该数本身，如153 = 1^3+5^3+3^3，则153是一个“水仙花数”
+
+//#include<stdbool.h>
+//#include<math.h>
+//bool if_narcissistic_number(int num)
+//{
+//	int i = 0;
+//	int len = 1;
+//	int n = num;
+//	int sum = 0;
+//	while ((n /= 10) != 0)
+//	{
+//		len++;
+//	}
+//	for (i = 0,n = num; i < len; i++)
+//	{
+//		sum += pow(n % 10, len);
+//		n /= 10;
+//	}
+//	if (sum == num)
+//		return true;
+//	else 
+//		return false;
+//}
+// 
+//int  if_narcissistic_number(int num)
+//{
+//	int i = 0;
+//	int len = 1;
+//	int n = num;
+//	int sum = 0;
+//	while ((n /= 10) != 0)
+//	{
+//		len++;
+//	}
+//	for (i = 0, n = num; i < len; i++)
+//	{
+//		sum += pow(n % 10, len);
+//		n /= 10;
+//	}
+//	return sum == num;
+//}
+//int main()
+//{
+//	int i = 0;
+//	int num = 1;
+//	int count = 0;
+//	for (i = 1; i <= 100000; i++)
+//	{
+//		if (if_narcissistic_number(i))
+//		{
+//			count++;
+//			printf("%5d ", i);
+//			if (count % 10 == 0)
+//			{
+//				printf("\n");
+//			}
+//		}
+//	}
+//	
+//	return 0;
+//}
+
 int main()
 {
-	int n = 0;
-	
+	int i = 0;
+	//line为上半部分行数，line-1为下半部分
+	int line = 0;
+	scanf("%d", &line);
+	for (i = 1; i <= line ; i++)
+	{
+		int j = 0;
+		int col = line + i - 1;
+		for (j = 1; j <= col; j++)
+		{
+			if (j <= line - i)
+			{
+				printf(" ");
+			}
+			else
+			{
+				printf("*");
+			}
+		}
+		printf("\n");
+	}
+	for (i = line - 1; i >= 1; i--)
+	{
+		int j = 0;
+		int col = line + i - 1;
+		for (j = 1; j <= col; j++)
+		{
+			if (j <= line - i)
+			{
+				printf(" ");
+			}
+			else
+			{
+				printf("*");
+			}
+		}
+		if (i != 1)
+		{
+			printf("\n");
+		}
+	}
 	return 0;
 }
-
-
 
 
 
