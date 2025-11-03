@@ -340,57 +340,177 @@
 //	return 0;
 //}
 
-int main()
-{
-	int i = 0;
-	//line为上半部分行数，line-1为下半部分
-	int line = 0;
-	scanf("%d", &line);
-	for (i = 1; i <= line ; i++)
-	{
-		int j = 0;
-		int col = line + i - 1;
-		for (j = 1; j <= col; j++)
-		{
-			if (j <= line - i)
-			{
-				printf(" ");
-			}
-			else
-			{
-				printf("*");
-			}
-		}
-		printf("\n");
-	}
-	for (i = line - 1; i >= 1; i--)
-	{
-		int j = 0;
-		int col = line + i - 1;
-		for (j = 1; j <= col; j++)
-		{
-			if (j <= line - i)
-			{
-				printf(" ");
-			}
-			else
-			{
-				printf("*");
-			}
-		}
-		if (i != 1)
-		{
-			printf("\n");
-		}
-	}
-	return 0;
-}
+//打印菱形
+//int main()
+//{
+//	int i = 0;
+//	//line为上半部分行数，line-1为下半部分
+//	int line = 0;
+//	scanf("%d", &line);
+//	for (i = 1; i <= line ; i++)
+//	{
+//		int j = 0;
+//		int col = line + i - 1;
+//		for (j = 1; j <= col; j++)
+//		{
+//			if (j <= line - i)
+//			{
+//				printf(" ");
+//			}
+//			else
+//			{
+//				printf("*");
+//			}
+//		}
+//		printf("\n");
+//	}
+//	for (i = line - 1; i >= 1; i--)
+//	{
+//		int j = 0;
+//		int col = line + i - 1;
+//		for (j = 1; j <= col; j++)
+//		{
+//			if (j <= line - i)
+//			{
+//				printf(" ");
+//			}
+//			else
+//			{
+//				printf("*");
+//			}
+//		}
+//		if (i != 1)
+//		{
+//			printf("\n");
+//		}
+//	}
+//	return 0;
+//}
 
+//喝汽水，1瓶汽水1元，2个空瓶可以换一瓶汽水，给20元，可以喝多少
+//int main()
+//{
+//	int money = 0;
+//	scanf("%d", &money);
+//	int total = money;
+//	int empty = 0;
+//	int shang = 0;
+//	int yushu = 0;
+//	do
+//	{
+//		empty = money % 2;
+//		money = money / 2;
+//		total += money;
+//		money += empty;
+//		 
+//	} while (money >= 2);
+//	printf("%d\n", total);
+//	return 0;
+//}
 
+//int main()
+//{
+//	int i = 10;
+//	int j = 20;
+//	int k = 3;
+//	k *= i + j;//赋值操作符=,*=的优先级较低 k = k * (i+j);//90
+//	printf("%d", k);
+//	return 0;
+//}
 
+//int a = 0;
+//test()
+//{
+//	int a = 1;
+//	a += 1;
+//}
+//int main()
+//{
+//	test();
+//	printf("%d", a);// 0
+//	return 0;
+//}
 
+//int main()
+//{
+//	int a = 0, b = 0;
+//	scanf("%d %d", &a, &b);
+//	int max = a > b ? a : b;
+//	int i = 1;
+//	while ((a * i) % b)
+//	{
+//		i++;
+//	}
+//	printf("%d", a * i);
+//
+//	return 0;
+//}
 
-
+//#include<string.h>
+//
+//void fun1(char* ch, int left, int right)
+//{
+//	char tmp = 0;
+//	while (left < right)
+//	{
+//		tmp = *(ch + right);
+//		*(ch + right) = *(ch + left);
+//		*(ch + left) = tmp;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//void fun2(char* ch, int left, int right)
+//{
+//	int i = 0;
+//	int count = -1;
+//	char tmp = 0;
+//	while (i <= right)
+//	{
+//		if (*(ch + i) != ' ')
+//		{
+//
+//			count++;
+//		}
+//		else
+//		{
+//
+//			while (left < count)
+//			{
+//				tmp = *(ch + count);
+//				*(ch + count) = *(ch + left);
+//				*(ch + left) = tmp;
+//				left++;
+//				count--;
+//			}
+//			left = i + 1;
+//			count = i;
+//		}
+//		i++;
+//	}
+//	while (left < count)
+//	{
+//		tmp = *(ch + count);
+//		*(ch + count) = *(ch + left);
+//		*(ch + left) = tmp;
+//		left++;
+//		count--;
+//	}
+//}
+//
+//
+//int main()
+//{
+//	char ch[101] = { 0 };
+//	gets(ch);//在C99中可用，在这儿虽然编译不起来，但不算错
+//	int left = 0;
+//	int right = strlen(ch) - 1;
+//	fun1(ch, left, right);
+//	fun2(ch, left, right);
+//	printf("%s\n", ch);
+//	return 0;
+//}
 
 
 
